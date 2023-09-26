@@ -1,0 +1,26 @@
+h1:hover{
+    color: rgb(252, 17, 17);
+}
+
+.principal{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    font-size: 20px;
+    color: rgb(23, 104, 3);
+    font-weight: bold;
+}
+
+#informacion{
+    text-align:center;
+    font-weight: bold;
+    
+}
+
+a[href*=".edu"]{
+    background-color: rgb(255, 238, 1);
+}
+
+body{
+    background: rgb(211, 116, 155);
+}
+
