@@ -1,0 +1,22 @@
+.parrafos{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    
+}
+
+body{
+
+    background: rgb(176, 179, 101);
+}
+
+h1:hover{
+    color: rgb(37, 141, 63);
+}
+
+.titulo{
+
+    text-align: center;
+    font-size: 60px;
+}
