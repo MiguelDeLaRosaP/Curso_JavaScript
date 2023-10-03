@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <head>
     <title>Ingreso de Usuario</title>
+    <link rel="Stylesheet" href="misEstilos.css">
 </head>
 <body>
-   <p>Ingrese su Nombre</p>
-   <input type="text" id="nombreUsuario"> 
-   <button onclick="Saludar()">Bienvenido</button>
-   <script>
-
-    function Saludar(){
-        alert("Buenas tardes " + document.getElementById("nombreUsuario").value)
+  <p>Dia de la semana favorito</p>
+  <input type="text" id="cajita">
+  <button onclick="pulsador()">Comprueba</button><br><br>
+  <button class="operaciones" onclick="sumar()">+</button>
+  
+  <button class="operaciones" onclick="restar()">-</button>
+  <script>
+    function pulsador(){
+        alert("El " + document.getElementById("cajita").value + " Será un maravilloso día")
     }
-   </script>
+
+    
+    function sumar(){
+       alert("Sumas un numero")
+
+    }
+
+    function restar(){
+        alert("Restas un numero")
+    }
+  </script>
     
 </body>
 </html>

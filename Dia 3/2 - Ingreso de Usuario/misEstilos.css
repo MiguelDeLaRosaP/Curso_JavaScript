@@ -1,0 +1,15 @@
+p{
+    width: 20%;
+    height: 20px;
+    background-color: aqua  ;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+.operaciones{
+
+    width: 8%;
+    height: 35px;
+    background-color: aquamarine;
+    color: brown;
+}
