@@ -1,0 +1,26 @@
+button{
+    margin-top: 5%;
+    width: 25%;
+    height: 100px;
+    background-color: rgb(38, 20, 202);
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: xx-large;
+    border-radius: 35%;
+    
+}
+
+input{
+    
+    width: 10%;
+    height: 60px;
+    background-color: rgb(172, 177, 202);
+    border-radius: 20%;
+    font-weight: bolder;
+    font-size: xx-large;
+
+}
+
+h1{
+    color: forestgreen;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Temporizador</title>
+    <link rel="Stylesheet" href="misEstilos.css">
+</head>
+<body>   
+    <button onclick="comenzarTiempo()">Segundos para el mensaje</button>
+    <input type="number" id="numero">
+    <h1 id="refran">Tras años de estudio y esfuerzo...</h1>
+
+
+    <script>
+        // setTimeOut(función, tiempo en milisegundos)
+
+        let segundos = document.getElementById("numero");
+        let frase = document.getElementById("refran");
+
+        function comenzarTiempo(){
+
+            setTimeout(mensajeFinal, 1000 * segundos.value);
+        }
+
+        function mensajeFinal(){
+                      
+            frase.textContent = "BOMBERO DE LA COMUNIDAD DE MADRID, ENHORABUENA :)";
+            frase.style.color = "red";
+        }
+    </script>
+
+</body>
+</html>
