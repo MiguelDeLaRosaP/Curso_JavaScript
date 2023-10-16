@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Fecha y Hora</title>
+    <link rel="Stylesheet" href="misEstilos.css">
+</head>
+<!-- CTRL K + CTRL C para poder poner comentarios -->
+<!-- el atributo onload realiza la acción nada más cargarse la página -->
+<body onload="comenzarReloj()">   
+    <button onclick="comenzarTiempo()">Segundos para el mensaje</button>
+    <input type="number" id="numero">
+    <h1 id="refran">00:00:00</h1>
+
+    
+    
+
+    <script>
+
+        let segundos = document.getElementById("numero");
+        let frase = document.getElementById("refran");
+       
+
+      
+
+        function comenzarTiempo(){
+
+            setTimeout(mensajeFinal, 1000 * segundos.value);
+        }
+
+        function mensajeFinal(){
+                     
+                     
+                     frase.style.color = "red";
+                     sonido1.play();
+                     
+                 }
+
+        function comenzarReloj(){
+
+            setInterval(ticTac, 1000)
+        }
+
+        function ticTac(){
+            let tiempoActual = new Date();
+            let hora = tiempoActual.getHours();
+            let minutos = tiempoActual.getMinutes();
+            let segundos = tiempoActual.getSeconds();
+
+            let textoHora = hora + ":" + minutos + ":" + segundos;
+            
+            frase.textContent = tiempoActual;
+        }
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <head>
-    <title>Temporizador</title>
+    <title>Audios</title>
     <link rel="Stylesheet" href="misEstilos.css">
 </head>
 <body>   
     <button onclick="comenzarTiempo()">Segundos para el mensaje</button>
     <input type="number" id="numero">
     <h1 id="refran">Despues de una semana dura...</h1>
-
+    <audio id="sonido" src="alarma.mp3" type="audio/mpeg"></audio>
+    
 
     <script>
-        // setTimeOut(función, tiempo en milisegundos)
 
         let segundos = document.getElementById("numero");
         let frase = document.getElementById("refran");
+        let senderismo = document.getElementById("foto");
+
+        // AUDIO
+        let sonido1 = document.getElementById("sonido");
 
         function comenzarTiempo(){
 
@@ -21,10 +25,17 @@
         }
 
         function mensajeFinal(){
-                      
+                     
             frase.textContent = "Nos espera BODORRIOOO";
             frase.style.color = "red";
+            sonido1.play();
+            
         }
+
+        
+
+
+
     </script>
 
 </body>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <title>Preguntas y Respuestas</title>
+    <link rel="Stylesheet" href="misEstilos.css">
+</head>
+<!-- onload significa, al momento de cargar la pagina yle ponemos los parentesis ya que será una función -->
+<body onload="comenzarRegresion()">
+<h1 id="titulo">Responde antes de que se acabe el tiempo<span id="cuentaRegresiva"></span></h1>
+ 
+<p>1. Con que se juega al tenis?</p>
+<input type="text" id="respuesta1">
+<p>2. Que pesa más, un Kilo de Plomo o un Kilo de Paja?</p>
+<input type="text" id="respuesta2">
+<p>3. De que color es el cielo?</p>
+<input type="text" id="respuesta3">
+<p>4. En que continente está Madagascar?</p>
+<input type="text" id="respuesta4">
+<p>5. Estación donde hace más calor</p>
+<input type="text" id="respuesta5">
+<br><br>
+<button onclick="finalizar()">Terminé</button>
+<button onclick="reiniciar()">Volver a intentarlo</button>
+
+<audio id="audioFinal">
+
+  <source src="gameover.mp3" type="audio/mpeg">
+  Sonido no habilitado
+</audio>
+<script>
+
+  let tiempoTerminado;
+  let intervaloTiempo;
+
+  function cuentaRegresiva(){
+
+    // setTimeout es una función en la cual se pasa 2 parametros, una función y el tiempo para finalizar, en este caso 30segundo = 30000milisegundos
+    tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+
+    // setInterval es una función donde se pasan 2 parametros, una función donde programas en este caso para que vaya descontando segundos y
+    // el numero de segundos que quieres que pase hasta que se vuelva a ejecutar, en este caso 1 segundo o 1000 milisegundos
+    intervaloTiempo = setInterval(tictac, 1000);
+
+    document.getElementById("cuentaRegresiva").textContent = 30;
+
+  }
+
+  function tictac(){
+
+    let tiempo = document.getElementById("cuentaRegresiva").textContent;
+    document.getElementById("cuentaRegresiva").textContent = tiempo - 1;
+  }
+
+  function tiempoCumplido(){
+    // función que permite limpiar o detener cualquier función que tenga que ver con intervalos
+    clearInterval(intervaloTiempo);
+    document.getElementById("cuentaRegresiva").textContent = 0;
+    document.getElementById("audioFinal").play();
+
+    alert("GAME OVER");
+
+  }
+
+  function finalizar(){
+
+    // función para reiniciar el tiempo
+    clearTimeout(tiempoTerminado);
+    clearInterval(intervaloTiempo);
+
+    let fecha = new Date();
+    let respuesta1 = document.getElementById("respuesta1").value;
+    let respuesta2= document.getElementById("respuesta2").value;
+    let respuesta3 = document.getElementById("respuesta3").value;
+    let respuesta4 = document.getElementById("respuesta4").value;
+    let respuesta5 = document.getElementById("respuesta5").value;
+
+    let mensaje = fecha.toLocaleDateString("es-ES") + "\n"+ "\n"  + 
+                    "1. " + respuesta1 + "\n" + 
+                    "2. " + respuesta2 + "\n" +
+                    "3. " + respuesta3 + "\n" +
+                    "4. " + respuesta4 + "\n" +
+                    "5. " + respuesta5 + "\n";
+
+    alert(mensaje);
+
+  }
+
+  function reiniciar(){
+    // reiniciar cuando se toque el boton
+    location.reload();
+
+  }
+
+</script>
+
+</body>
+</html>
+
