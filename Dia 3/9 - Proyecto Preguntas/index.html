@@ -5,7 +5,7 @@
 </head>
 <!-- onload significa, al momento de cargar la pagina yle ponemos los parentesis ya que será una función -->
 <body onload="comenzarRegresion()">
-<h1 id="titulo">Responde antes de que se acabe el tiempo<span id="cuentaRegresiva"></span></h1>
+<h1 id="titulo">Responde antes de que se acabe el tiempo <span id="cuentaRegresiva"></span></h1>
  
 <p>1. Con que se juega al tenis?</p>
 <input type="text" id="respuesta1">
@@ -21,17 +21,17 @@
 <button onclick="finalizar()">Terminé</button>
 <button onclick="reiniciar()">Volver a intentarlo</button>
 
-<audio id="audioFinal">
-
-  <source src="gameover.mp3" type="audio/mpeg">
-  Sonido no habilitado
+<audio id="audioFinal" src="gameover.mp3" type="audio/mpeg">
 </audio>
+
+
 <script>
 
   let tiempoTerminado;
   let intervaloTiempo;
+  let sonido = document.getElementById("audioFinal");
 
-  function cuentaRegresiva(){
+  function comenzarRegresion(){
 
     // setTimeout es una función en la cual se pasa 2 parametros, una función y el tiempo para finalizar, en este caso 30segundo = 30000milisegundos
     tiempoTerminado = setTimeout(tiempoCumplido, 30000);
@@ -53,10 +53,10 @@
   function tiempoCumplido(){
     // función que permite limpiar o detener cualquier función que tenga que ver con intervalos
     clearInterval(intervaloTiempo);
-    document.getElementById("cuentaRegresiva").textContent = 0;
-    document.getElementById("audioFinal").play();
-
+    document.getElementById("cuentaRegresiva").textContent = 0; 
+    sonido.play();
     alert("GAME OVER");
+    
 
   }
 
