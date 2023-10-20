@@ -3,24 +3,26 @@
     <title>Preguntas y Respuestas</title>
     <link rel="Stylesheet" href="misEstilos.css">
 </head>
-<!-- onload significa, al momento de cargar la pagina yle ponemos los parentesis ya que será una función -->
+<!-- onload significa, al momento de cargar la pagina y le ponemos los parentesis ya que será una función -->
 <body onload="comenzarRegresion()">
 <h1 id="titulo">Responde antes de que se acabe el tiempo <span id="cuentaRegresiva"></span></h1>
- 
-<p>1. Con que se juega al tenis?</p>
-<input type="text" id="respuesta1">
-<p>2. Que pesa más, un Kilo de Plomo o un Kilo de Paja?</p>
-<input type="text" id="respuesta2">
-<p>3. De que color es el cielo?</p>
-<input type="text" id="respuesta3">
-<p>4. En que continente está Madagascar?</p>
-<input type="text" id="respuesta4">
-<p>5. Estación donde hace más calor</p>
-<input type="text" id="respuesta5">
-<br><br>
-<button onclick="finalizar()">Terminé</button>
-<button onclick="reiniciar()">Volver a intentarlo</button>
+<br>
+<div>
 
+  <p>1. Con que se juega al tenis?</p>
+  <input type="text" id="respuesta1">
+  <p>2. Que pesa más, un Kilo de Plomo o un Kilo de Paja?</p>
+  <input type="text" id="respuesta2">
+  <p>3. De que color es el cielo?</p>
+  <input type="text" id="respuesta3">
+  <p>4. En que continente está Madagascar?</p>
+  <input type="text" id="respuesta4">
+  <p>5. Estación donde hace más calor</p>
+  <input type="text" id="respuesta5">
+  <br><br>
+  <button onclick="finalizar()">Terminé</button>
+  <button onclick="reiniciar()">Volver a intentarlo</button>
+</div>
 <audio id="audioFinal" src="gameover.mp3" type="audio/mpeg">
 </audio>
 
@@ -73,6 +75,7 @@
     let respuesta4 = document.getElementById("respuesta4").value;
     let respuesta5 = document.getElementById("respuesta5").value;
 
+    // toLocaleDateString("es-ES") te pone la fecha actual y entre parentesis ponemos la zona horaria, en este caso España
     let mensaje = fecha.toLocaleDateString("es-ES") + "\n"+ "\n"  + 
                     "1. " + respuesta1 + "\n" + 
                     "2. " + respuesta2 + "\n" +

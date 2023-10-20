@@ -9,3 +9,29 @@ h1{
     color: black;
 }
 
+p{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input{
+
+    height: 20px;
+    border: solid;
+
+}
+
+button{
+
+    color: blue;
+    height: 40px;
+    font-weight: bold;
+    
+}
+
+div{
+
+    text-align: center;
+}

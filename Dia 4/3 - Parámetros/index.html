@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Return</title>
+</head>
+<body>
+
+  <p>Primer Numero</p>
+  <input type="number" id="NumeroUno">
+  <p>Segundo Numero</p>
+  <input type="number" id="NumeroDos">
+  <br><br>
+  <button onclick="mostrarResultado()">Calcular</button>
+  <h2 id="mensaje">Resultado</h2>
+    <script>
+
+        function sumar(numero1, numero2){
+            // Para que los numeros te lo pongan como number y no como String, ponemos + antes de cada parametro
+            let resultado = +numero1 + +numero2
+            return resultado;
+        }
+
+        function mostrarResultado(){
+
+            let Uno = document.getElementById("NumeroUno");
+            let Dos = document.getElementById("NumeroDos");
+            let final = sumar(NumeroUno.value, NumeroDos.value);  
+            let respuesta = document.getElementById("mensaje");
+
+            respuesta.textContent = "Resultado " + final;
+
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
