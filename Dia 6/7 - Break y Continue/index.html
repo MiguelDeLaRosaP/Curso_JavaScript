@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Break y Continue</title>
+</head>
+
+<body>
+    <!-- BREAK -->
+    <script>
+        let array1 = [5, 12, 3, 49, 51, 67, 77, 1, 23, 99, 37];
+        for (let numero of array1) {
+
+            if (numero < 50) {
+                document.write(numero + "<br>");
+            } else {
+                break;
+            }
+        }
+        document.write("Esto son todos los números (BREAK)<br><br>" )
+
+
+    </script>
+    <!-- CONTINUE -->
+    <script>
+        let array2 = [5, 12, 3, 49, 51, 67, 77, 1, 23, 99, 37];
+        for (let numero of array2) {
+
+            if (numero < 50) {
+                document.write(numero + "<br>");
+            } else {
+                continue;
+                Document.write("numero mayor a 50");
+            }
+        }
+        document.write("Esto son todos los números (CONTINUE)")
+
+
+    </script>
+</body>
+</html>
