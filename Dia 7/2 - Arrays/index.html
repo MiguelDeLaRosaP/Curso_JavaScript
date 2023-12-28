@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>TIPOS DE ARRAYS</title>
+</head>
+<body>
+    
+    <script>
+
+        let misAmigos = ["Pepe", "Laura", "Eva", "Jose", "Maik", "Ines"];
+
+        // Visualizar toda la lista
+        console.log(misAmigos);
+
+        //INDEX
+        // Visualiza el numero de elementos
+        console.log(misAmigos.index)
+
+        // LENGTH
+        // lenght te devuelve el largo o cantidad de elementetos de tu Array
+        console.log(misAmigos.length);
+
+        // [3]
+        // Acceder al INDICE del Array poniendo su posición
+        console.log(misAmigos[3]); // Jose ya que los Arrays empiezan en 0
+
+        //INDEX OF
+        // Acceder al índice de cualquier elemento del array
+        console.log(misAmigos.indexOf("Maik"));
+
+        //POP
+        // eliminar el ULTIMO elemento con pop que significa saltar
+        console.log(misAmigos.pop()); // Eliminara a Ines en la primera vuelta ya que es la última de los elementos
+
+        //Almacenar el ultimo elemento eliminado en una variable
+        let eliminado =misAmigos.pop();
+        console.log(eliminado);// En este caso se elimina Maik ya que es el siguiente elemento a eliminar
+
+        //SHIFT
+        //eliminar el PRIMER elemento del Array 
+        console.log(misAmigos.shift()); // Elimina a Pepe ya que es el primer registo
+
+        //UNSHIFT
+        //AGREGAR registros al COMIENZO del Array
+        console.log(misAmigos.unshift("Sergio"));
+
+        //PUSH
+        //Agregar registros al FINAL del Array
+        console.log(misAmigos.push("Lucia"));
+
+        // SPLICE
+        //Eliminar uno o varios registros EN MEDIO del Array
+        console.log(misAmigos.splice(2,3)) //a partir del indice 2 elimina a 3 registros (en este caso solo quedarían 2 Registros)
+
+        // FOR EACH
+        //Recorrer un Array con un método
+        console.log(misAmigos.forEach(function(amigo){console.log(amigo)})) // se le pasa una funcion anonima y sacaria los unicos 2 registros que tenemos
+
+
+        // mostrar el numero de indices de mis elementos del Array
+        console.log(misAmigos.forEach(function(amigo,index){console.log(index + ": " + amigo)}));// 0: Sergio, 1: Lucia
+
+
+
+
+        
+
+
+        
+
+
+       
+
+
+
+
+        
+
+
+
+
+
+
+    </script>
+    
+
+
+
+</body>
+</html>
