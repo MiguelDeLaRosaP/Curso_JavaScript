@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Parámetros de Constructor</title>
+</head>
+
+<body>
+
+    <script>
+
+        function Perro(raza, edad) {
+
+            this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.ladrar = function () {
+                console.log("Guau");
+            };
+        }
+        // entre los parentesis le ponemos las caracteristicas que nos pide por los parametros introducidos en el constructor
+        let murky = new Perro("Perro de Agua", 5);
+        let luna = new Perro("husky", 7);
+        let epi = new Perro("Labrador", 1);
+
+        function Empleado(nombre, apellido, edad, cargo){
+
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.edad = edad;
+            this.cargo = cargo;
+            this.presentarse = function(){
+
+                // es otra forma más legible de realizar el console.log con otras comillas y con ${} para poner los parametros 
+                console.log(`Mi nombre es ${this.nombre} ${this.apellido}, soy ${this.cargo}, y tengo ${this.edad} años`);
+            }
+        }
+
+        
+        
+    </script>
+
+</body>

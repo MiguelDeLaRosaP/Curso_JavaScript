@@ -1,0 +1,24 @@
+p{
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+button{
+
+    margin-right: 10px;
+    height: 50px;
+    font-style: oblique;
+    background-color: aquamarine;
+    font-weight: bold;
+    color: black;
+}
+
+button:hover{
+    color: brown;
+}
+
+h1{
+    color: crimson;
+}
+

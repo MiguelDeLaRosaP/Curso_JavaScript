@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <title>LOOP FOR IN</title>
+</head>
+
+<body>
+    <script>
+        //Itera por los elementos de los objetos
+        // sintaxis for(let propiedad in objeto){código a ejecutar;}
+
+        function Perro(raza, edad, color) {
+
+            this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.color = color;
+            this.ladrar = function () {
+                console.log("Guau");
+            };
+        }
+        
+        let murky = new Perro("Perro de Agua", 5, "negro");
+        let luna = new Perro("husky", 7, "gris");
+        let epi = new Perro("Labrador", 1, "marron");
+
+        for(let caracteristica in murky){
+
+            console.log(caracteristica + ": " + murky[caracteristica]);
+        }
+
+    </script>
+</body>
+
+</html>

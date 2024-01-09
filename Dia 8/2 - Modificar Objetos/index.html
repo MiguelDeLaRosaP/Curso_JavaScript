@@ -5,18 +5,30 @@
 </head>
 
 <body>
+
     <script>
 
         let perro = {
             nombre: "Murky",
             raza: "Perro de Agua",
             edad: 8,
-            ladrar(){
+            ladrar() {
                 console.log("Guauu");
             }
         }
+   
+        // sumamos un año a la edad
+        function cumplirAnios(){
+
+            perro.edad = perro.edad + 1;
+        }
+        // agregar propiedad con []
+        perro["colorOjos"] = "Verdes";
+
+
 
     </script>
+
 
 </body>
 
