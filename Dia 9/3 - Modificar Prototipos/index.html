@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Modificar Prototipos</title>
+</head>
+<body>
+   
+    <script>
+        //Constructor
+      function Libro(autor, titulo, cantPaginas){
+        //Propiedades
+        this.autor=autor;
+        this.titulo=titulo;
+        this.cantPaginas=cantPaginas;
+
+      }
+      // Instancia-Objeto
+      let libro1 = new Libro("Stephen King", "Carrie", 564);
+      
+      // Con la palabra prototype modificamos 
+      Libro.prototype.abrirLibro = function(){
+
+        alert(this.titulo + " ha sido abierto");
+      }
+
+      // EJEMPLO  DE BUENAS PRACTICAS-- PROPIEDADES DENTRO DEL CONSTRUCTOR, LOS MÉTODOS DENTRO DE PROTOTYPE
+
+      function unObjeto(a){
+        this.a = a;
+      }
+
+      unObjeto.prototype.metodo1 = function(){};
+      unObjeto.prototype.metodo2 = function(){};
+
+    </script>
+
+</body>
+</html>

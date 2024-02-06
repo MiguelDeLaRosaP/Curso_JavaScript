@@ -1,0 +1,57 @@
+h1 {
+
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px rgb(233, 7, 52);
+    margin-bottom: 0.5em;
+}
+
+button {
+
+    background-color: rgb(22, 151, 22);
+    border: none;
+    color: azure;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+
+
+body {
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    /* No se repite la imagen de fondo*/
+    background-attachment: fixed;
+    /* Fijar la imagen de fondo*/
+    background-size: cover;
+    /* Cubrir todo el área*/
+
+}
+
+ul {
+    list-style-type: none;
+    /* Elimina los puntos de la lista */
+    margin: 0;
+    /* Elimina los margenes*/
+    padding: 0;
+    /* Elimina los espacios internos */
+}
+
+li {
+    background-color: aliceblue;
+    padding: 10px;
+    /* Espacio interno*/
+    border-bottom: 1px solid gray;
+    /* Border inferior*/
+    text-align: center
+        /* Alineación Texto*/
+    ;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Subclases</title>
+</head>
+<body>
+
+    <script>
+        class Deportista{
+            constructor(nombre, apellido){
+                this.nombre = nombre;
+                this.apellido = apellido;
+
+            }
+        }
+        // CON LA PALABRA EXTENDS, HEREDAMOS DE LA CLASE DEPORTISTA 
+        class Futbolista extends Deportista{
+            constructor(nombre, apellido, goles){
+                super(nombre, apellido);
+                this.goles = goles;
+
+            }
+        }
+    </script>
+    
+</body>

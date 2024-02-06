@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <head>
     <title>Registro de Empleados</title>
     <link rel="Stylesheet" href="misEstilos.css">
     <script src="misScript.js"></script>
 </head>
+
 <body>
 
     <h1>Registro de Empleados</h1>
@@ -20,6 +22,27 @@
     <button onclick="agregarEmpleado()">Agregar Empleado</button>
     <button onclick="mostrarEmpleados()">Listado</button>
 
+    <!-- Creamos la tabla -->
+    <div id="tabla">
+        <table>
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Cargo</th>
+            </thead>
+            <tbody id="cuerpo">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 
 </body>
+
 </html>

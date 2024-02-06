@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Introducción a JSON</title>
+</head>
+
+<body>
+
+    <!-- JSON es un formato de intercambio de datos estandarizado que es 
+    ampliamente aceptado y que es utilizado en aplicaciones web y móviles
+    debido a su eficiencia y a su facilidad de uso -->
+
+
+    <!-- CONCEPTO DE COMO EXTRAER EL JSON (ES SOLO UN EJEMPLO) -->
+    <div id="nombre"></div>
+    <script>
+        let miPersona = {
+
+            "nombre": "Miguel De La Rosa",
+            "edad": 33,
+            "esEstudiante": false,
+            "direccion": {
+                "calle": "Av. Siempreviva 742",
+                "ciudad": "Springfield"
+            },
+            "telefonos": [
+                "555-555-555",
+                "555-555-556"
+            ]
+        }
+
+        let elementoTexto = document.getElementById("nombre");
+        elementoTexto.textContent = miPersona.nombre;
+
+        
+    </script>
+</body>

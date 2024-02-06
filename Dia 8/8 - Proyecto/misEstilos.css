@@ -1,12 +1,13 @@
-p{
+p {
     font-weight: bolder;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 
 }
 
-button{
+button {
 
     margin-right: 10px;
+    margin-bottom: 20px;
     height: 50px;
     font-style: oblique;
     background-color: aquamarine;
@@ -14,11 +15,30 @@ button{
     color: black;
 }
 
-button:hover{
+button:hover {
     color: brown;
+
 }
 
-h1{
+h1 {
+    color: rgb(189, 15, 15);
+}
+
+table {
+    width: 400px;
+    text-align: center;
+
+}
+
+table thead {
+
+    font-size: 20px;
+    color: darkblue;
+
+
+}
+
+table tbody {
     color: crimson;
+    font-weight: bold;
 }
-

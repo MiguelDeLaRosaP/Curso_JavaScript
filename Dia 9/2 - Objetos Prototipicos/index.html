@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>Objetos Prototipicos </title>
+</head>
+<body>
+   
+    <script>
+        //Constructor
+      function Libro(autor, titulo, cantPaginas){
+        //Propiedades
+        this.autor=autor;
+        this.titulo=titulo;
+        this.cantPaginas=cantPaginas;
+
+      }
+      // Instancia-Objeto
+      let libro1 = new Libro("Stephen King", "Carrie", 564);
+      let libro2 = Object.create(Libro1);
+
+      // Cadena de prototipos
+      let libro3 =  new libro1.constructor("Frank Kazka", "La metamorfosis", 350);
+
+      
+
+    </script>
+
+</body>
+</html>
