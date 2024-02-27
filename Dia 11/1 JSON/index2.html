@@ -15,6 +15,7 @@
         // onload se indica para indicarle al codigo de js que se ha recibido una respuesta satisfactoria del servidor y los datos estan
         // disponibles para ser procesados
         xhr.onload = function () {
+            
             if (xhr.status === 200) {
                 datosJson = xhr.response;
                 let elementoTexto = document.getElementById("nombre");
@@ -23,7 +24,7 @@
                 //manejar el error
             }
         }
-
+        
         xhr.send();
 
     </script>
