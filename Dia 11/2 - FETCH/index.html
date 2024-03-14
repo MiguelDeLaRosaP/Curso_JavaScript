@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>FETCH</title>
+</head>
+<body>
+    
+    <!-- fetch = Extraer/Recuperar
+    solicitudes http asincronas
+    alternativa a XMLHttpRequest
+    interfaz + simple / sintaxis + limpia
+
+    fetch recibe como parameto la url del recurso del que se desea hacer la solicitud, en el ejemplo que venimos usando seria
+    el archivo personal.json y devuelve una promesa que se resuelve con la respuesta del servidor.
+
+    Una promesa es un objeto que representa a un valor o a una operación que puede estar disponible actualmente o va a estar
+     en el futuro.
+-->
+
+    <div id="nombre"></div>
+
+    <script>
+        let datosJson;
+
+        fetch("persona.json")
+        .then(respuesta => respuesta.json())
+        .then((salida) => {
+            datosJson = salida;
+
+            let elementoTexto = document.getElementById("nombre");
+            elementoTexto.textContent = datosJson.edad;
+        })
+        
+    </script>
+</body>
+</html>

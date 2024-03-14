@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Getters and Setters</title>
+</head>
+
+<body>
+
+    <!-- Get y Set son funciones especiales que se utilizan para Obtener(get) los valores de las propiedades,
+    o tambien para Establecer(set) nuevos valores en las propiedades de un objeto.
+
+    get = Obtener el valor actual;
+    set = Establecer un nuevo valor;
+
+    Get y Set se utilizan dentro de una clase pero fuera de su constructor
+
+
+    class Ejemplo{
+        constructor(){
+            this._algo = 0;
+        }
+        // get seguida del nombre de la propiedad, parentesis y una función que devuelva con return el valor de esa propiedad.
+
+        get algo(){
+            return this._algo;
+        }
+        // set seguida del nombre de la propiedad y entre parentesis como parametro recibe el nuevo valor que le quiere
+        asignar a la propiedad y luego una función para establecer ese valor para la propiedad.
+
+        set algo(nuevoValor){
+            this._algo = nuevoValor;
+        }
+    } -->
+    <script>
+
+        class Deportista {
+            constructor(nombre, apellido) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+
+            }
+        }
+        class Futbolista extends Deportista {
+            constructor(nombre, apellido, goles) {
+                super(nombre, apellido);
+                this._goles = goles;
+
+            }
+
+            get goles(){
+                return this._goles;
+            }
+
+            set goles (nuevoGoles){
+                this._goles = nuevoGoles;
+            }
+        }
+    </script>
+</body>
